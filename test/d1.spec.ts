@@ -8,7 +8,15 @@ const bindings = getMiniflareBindings();
 
 describe("better-sqlite3 unit tests", () => {
   beforeAll(async () => {
-    MikroORM.init({});
+    MikroORM.init({
+      dbName: "local.db",
+      entities: ["./test/*.entity.ts"],
+      driverOptions: {
+        connection: {
+          database: bindings.__D1_BETA__D1DATA,
+        },
+      },
+    });
   });
 
   it("knex works", async () => {});

@@ -1,9 +1,13 @@
 {
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
+    "moduleResolution": "Bundler",
     "baseUrl": ".",
     "noErrorTruncation": true,
-    "types": ["vitest-environment-miniflare/globals"]
+    "types": ["vitest-environment-miniflare/globals"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "import"
   },
   "include": ["src", "test"]
 }
