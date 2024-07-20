@@ -2,7 +2,8 @@
   "extends": "./tsconfig.build.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "noErrorTruncation": true
+    "noErrorTruncation": true,
+    "types": ["vitest-environment-miniflare/globals"]
   },
-  "include": ["src"]
+  "include": ["src", "test"]
 }

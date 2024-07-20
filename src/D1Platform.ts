@@ -3,7 +3,7 @@ import { escape } from "sqlstring-sqlite";
 import { JsonProperty, Utils, type EntityProperty } from "@mikro-orm/core";
 import { BaseSqlitePlatform } from "@mikro-orm/knex";
 import { D1SchemaHelper } from "./D1SchemaHelper";
-import { D1ExceptionConverter } from "./D1ExceptionConvertor";
+import { D1ExceptionConverter } from "./D1ExceptionConverter";
 
 export class D1Platform extends BaseSqlitePlatform {
   protected override readonly schemaHelper: D1SchemaHelper = new D1SchemaHelper(
