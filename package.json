@@ -1,0 +1,25 @@
+{
+  "name": "@torchauth/mikro-orm-d1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruce Harrison",
+  "license": "MIT",
+  "dependencies": {
+    "@mikro-orm/knex": "6.3.0",
+    "@torchauth/knex-cloudflare-d1": "^0.1.1",
+    "better-sqlite3": "11.1.2",
+    "fs-extra": "11.2.0",
+    "sqlstring-sqlite": "0.1.1"
+  },
+  "devDependencies": {
+    "@mikro-orm/core": "^6.3.0",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "@mikro-orm/core": "^6.0.0"
+  }
+}
