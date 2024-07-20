@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "src/index.ts",
+  "type": "module",
   "scripts": {
     "test": "vitest"
   },
-  "type": "module",
   "author": "Bruce Harrison",
   "license": "MIT",
   "dependencies": {

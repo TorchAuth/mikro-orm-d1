@@ -6,8 +6,7 @@
     "noErrorTruncation": true,
     "types": ["vitest-environment-miniflare/globals"],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "import"
+    "emitDecoratorMetadata": true
   },
-  "include": ["src", "test"]
+  "include": ["src", "test", "test.entity.ts"]
 }
