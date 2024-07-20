@@ -10,7 +10,7 @@ describe("better-sqlite3 unit tests", () => {
   beforeAll(async () => {
     MikroORM.init({
       dbName: "local.db",
-      entities: ["./test/*.entity.ts"],
+      entities: ["./test/*.entity.*"],
       driverOptions: {
         connection: {
           database: bindings.__D1_BETA__D1DATA,
