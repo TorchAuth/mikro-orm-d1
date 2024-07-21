@@ -1,19 +1,22 @@
 "use strict";
 import { MikroORM } from "src";
 import { describe, it, expect, beforeAll } from "vitest";
+import { User } from "./test.entity";
+import { D1Database } from "@cloudflare/workers-types";
 
 // DEBUG=knex:*
 
 const bindings = getMiniflareBindings();
+const database = bindings.__D1_BETA__D1DATA as D1Database;
 
 describe("better-sqlite3 unit tests", () => {
   beforeAll(async () => {
     MikroORM.init({
-      dbName: "local.db",
-      entities: ["./test/*.entity.*"],
+      dbName: "d1",
+      entities: [User],
       driverOptions: {
         connection: {
-          database: bindings.__D1_BETA__D1DATA,
+          database,
         },
       },
     });

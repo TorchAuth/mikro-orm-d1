@@ -2,18 +2,18 @@ import { Entity, PrimaryKey, Property } from "@mikro-orm/core";
 
 @Entity()
 export class User {
-  @PrimaryKey()
+  @PrimaryKey({ type: "uuid" })
   id!: number;
 
-  @Property()
+  @Property({ type: "string" })
   fullName!: string;
 
-  @Property()
+  @Property({ type: "string" })
   email!: string;
 
-  @Property()
+  @Property({ type: "string" })
   password!: string;
 
-  @Property({ type: "text" })
-  bio = "";
+  @Property({ type: "string" })
+  bio!: string;
 }

@@ -10,6 +10,8 @@
   "author": "Bruce Harrison",
   "license": "MIT",
   "dependencies": {
+    "@cloudflare/workers-types": "^4.20240718.0",
+    "@mikro-orm/cli": "^6.3.0",
     "@mikro-orm/knex": "6.3.0",
     "@torchauth/knex-cloudflare-d1": "^0.1.1",
     "better-sqlite3": "11.1.2",
