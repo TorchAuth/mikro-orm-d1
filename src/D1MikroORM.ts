@@ -24,6 +24,7 @@ export class D1MikroORM<
     D extends IDatabaseDriver = D1Driver,
     EM extends EntityManager = D[typeof EntityManagerType] & EntityManager
   >(options?: Options<D, EM>): Promise<MikroORM<D, EM>> {
+    if (options) options.ensureDatabase = false;
     return super.init(options);
   }
 
@@ -34,6 +35,7 @@ export class D1MikroORM<
     D extends IDatabaseDriver = D1Driver,
     EM extends EntityManager = D[typeof EntityManagerType] & EntityManager
   >(options: Options<D, EM>): MikroORM<D, EM> {
+    options.ensureDatabase = false;
     return super.initSync(options);
   }
 }

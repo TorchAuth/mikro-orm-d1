@@ -12,6 +12,7 @@ const database = bindings.__D1_BETA__D1DATA as D1Database;
 describe("better-sqlite3 unit tests", () => {
   beforeAll(async () => {
     MikroORM.init({
+      debug: true,
       dbName: "d1",
       entities: [User],
       driverOptions: {
