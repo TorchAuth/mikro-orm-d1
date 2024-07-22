@@ -1,10 +1,10 @@
 import {
-  defineConfig,
-  MikroORM,
-  type Options,
-  type IDatabaseDriver,
   type EntityManager,
   type EntityManagerType,
+  type IDatabaseDriver,
+  MikroORM,
+  type Options,
+  defineConfig,
 } from "@mikro-orm/core";
 import { D1Driver } from "./D1Driver";
 import type { SqlEntityManager } from "@mikro-orm/knex";

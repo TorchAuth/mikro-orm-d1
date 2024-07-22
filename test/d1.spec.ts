@@ -1,8 +1,8 @@
 "use strict";
-import { MikroORM } from "src";
-import { describe, it, expect, beforeAll } from "vitest";
-import { User } from "./test.entity";
+import { beforeAll, describe, it } from "vitest";
 import { D1Database } from "@cloudflare/workers-types";
+import { MikroORM } from "src";
+import { User } from "./test.entity";
 
 // DEBUG=knex:*
 

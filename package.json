@@ -20,6 +20,9 @@
     "sqlstring-sqlite": "0.1.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.1.0",
     "@mikro-orm/core": "^6.3.0",
     "typescript": "^5.5.3",
     "vitest": "^2.0.3",
