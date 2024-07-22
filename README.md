@@ -27,6 +27,8 @@ export default {
 
 ## Issues
 
+There is a fundamental incompatibility between parts of Mikro-ORM and it's dependencies with the `workerd` runtime. Here's a brain-dump of what I've seen thus far:
+
 - Cloudflare requires native `node` libs to be prefixed with `node:`
   - Tons of older libraries utilized in Mikro-ORM don't do this
   - Mikro-ORM also doesn't do this
