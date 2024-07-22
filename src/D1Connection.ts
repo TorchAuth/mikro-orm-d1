@@ -14,4 +14,8 @@ export class D1Connection extends BetterSqliteConnection {
   override async connect() {
     this.createKnex();
   }
+
+  override async isConnected() {
+    return this.connected;
+  }
 }
