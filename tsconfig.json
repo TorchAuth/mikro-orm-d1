@@ -6,7 +6,8 @@
     "noErrorTruncation": true,
     "types": ["vitest-environment-miniflare/globals"],
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist"
   },
-  "include": ["src/**/*", "test/**/*"]
+  "include": ["src/**/*"]
 }

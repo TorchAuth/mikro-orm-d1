@@ -10,7 +10,8 @@
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitOverride": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "skipLibCheck": true
   },
   "exclude": ["**/node_modules", "**/dist"]
 }

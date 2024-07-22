@@ -7,7 +7,8 @@
   "type": "module",
   "main": "src/index.ts",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "build": "tsc"
   },
   "dependencies": {
     "@mikro-orm/better-sqlite": "^6.3.0",
