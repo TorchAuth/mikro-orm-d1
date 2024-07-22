@@ -1,0 +1,6 @@
+compatibility_flags = ["export_commonjs_default", "nodejs_compat"]
+
+[[d1_databases]]
+binding = "__D1_BETA__D1DATA"
+database_name = "D1DATA"
+database_id = "<unique-ID-for-your-database>"
