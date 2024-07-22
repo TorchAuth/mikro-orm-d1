@@ -8,5 +8,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src", "test", "test.entity.ts"]
+  "include": [
+    "src",
+    "test",
+    "test.entity.ts",
+    "old/D1Platform.ts",
+    "old/D1SchemaHelper.ts",
+    "old/D1ExceptionConverter.ts"
+  ]
 }
