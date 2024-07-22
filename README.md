@@ -2,6 +2,29 @@
 
 The repo is a Mikro-ORM plugin that allows usage of Cloudflare D1.
 
+## Example
+
+```ts
+import { MikroORM } from '@mikro-orm/core';
+import { User } from './test.entity';
+
+export default {
+  async fetch(request, env, ctx): Promise<Response> {
+    const mikro = await MikroORM.init({
+      debug: true,
+      dbName: 'd1',
+      entities: [User],
+      driverOptions: {
+        connection: {
+          database: env.MY_DB,
+        },
+      },
+    });
+    return new Response('Hello World!');
+  },
+} satisfies ExportedHandler<Env>;
+```
+
 ## Issues
 
 - Cloudflare requires native `node` libs to be prefixed with `node:`
