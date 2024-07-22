@@ -8,7 +8,7 @@
   "main": "src/index.ts",
   "scripts": {
     "test": "vitest",
-    "build": "tsc"
+    "build": "tsc -p ./tsconfig.build.json"
   },
   "dependencies": {
     "@mikro-orm/better-sqlite": "^6.3.0",
