@@ -1,11 +1,10 @@
 {
-  "extends": "./tsconfig.build.json",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "noErrorTruncation": true,
-    "types": ["vitest-environment-miniflare/globals"],
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  },
-  "include": ["src/**/*"]
+	"extends": "./tsconfig.build.json",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"noErrorTruncation": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true
+	},
+	"include": ["src/**/*"]
 }

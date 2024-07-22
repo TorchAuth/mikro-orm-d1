@@ -1,5 +1,5 @@
-import { BetterSqliteConnection } from "@mikro-orm/better-sqlite";
-import Client_D1 from "@torchauth/knex-cloudflare-d1";
+import { BetterSqliteConnection } from '@mikro-orm/better-sqlite';
+import Client_D1 from '@torchauth/knex-cloudflare-d1';
 
 /**
  * @inheritDoc

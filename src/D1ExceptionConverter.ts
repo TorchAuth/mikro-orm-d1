@@ -1,4 +1,4 @@
-import { BetterSqliteExceptionConverter } from "@mikro-orm/better-sqlite";
+import { BetterSqliteExceptionConverter } from '@mikro-orm/better-sqlite';
 
 /**
  * @inheritDoc

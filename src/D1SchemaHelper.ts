@@ -1,4 +1,4 @@
-import { BetterSqliteSchemaHelper } from "@mikro-orm/better-sqlite";
+import { BetterSqliteSchemaHelper } from '@mikro-orm/better-sqlite';
 
 /**
  * @inheritDoc

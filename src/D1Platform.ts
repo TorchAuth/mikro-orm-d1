@@ -1,4 +1,4 @@
-import { BetterSqlitePlatform } from "@mikro-orm/better-sqlite";
+import { BetterSqlitePlatform } from '@mikro-orm/better-sqlite';
 
 /**
  * @inheritDoc

@@ -23,7 +23,8 @@
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.1.0",
     "typescript": "^5.5.3",
-    "vitest": "^2.0.3",
+    "vitest": "^1.5.0",
+    "@cloudflare/vitest-pool-workers": "^0.4.5",
     "vitest-environment-miniflare": "^2.14.2",
     "wrangler": "^3.65.0"
   },
