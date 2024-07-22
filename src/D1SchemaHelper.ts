@@ -1,3 +1,3 @@
-import { BaseSqliteSchemaHelper } from "@mikro-orm/knex";
+import { BetterSqliteSchemaHelper } from "@mikro-orm/better-sqlite";
 
-export class D1SchemaHelper extends BaseSqliteSchemaHelper {}
+export class D1SchemaHelper extends BetterSqliteSchemaHelper {}
