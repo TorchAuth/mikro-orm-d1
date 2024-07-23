@@ -5,7 +5,7 @@
     "noErrorTruncation": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["@cloudflare/workers-types", "vitest-environment-miniflare/globals"]
+    "types": ["@cloudflare/workers-types", "@cloudflare/vitest-pool-workers"]
   },
   "include": ["src/**/*", "**/test"]
 }
