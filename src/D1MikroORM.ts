@@ -25,7 +25,7 @@ export class D1MikroORM<EM extends EntityManager = SqlEntityManager> extends Mik
     options?: D1DatabaseConfigOptions<D, EM>
   ): Promise<MikroORM<D, EM>> {
     if (options) options.ensureDatabase = false;
-    options?.driverOptions;
+
     return super.init(options);
   }
 
