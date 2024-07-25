@@ -1,4 +1,4 @@
-import { Entity, PrimaryKey, Property } from '../../out/mikro-orm-d1';
+import { Entity, PrimaryKey, Property } from '../../dist/mikro-orm-d1';
 
 @Entity()
 export class User {

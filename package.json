@@ -8,7 +8,7 @@
 	"main": "src/index.ts",
 	"scripts": {
 		"test": "vitest",
-		"build": "rollup -c ./rollup.config.js"
+		"build": "vite build"
 	},
 	"dependencies": {
 		"@mikro-orm/better-sqlite": "^6.3.0",

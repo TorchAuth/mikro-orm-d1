@@ -1,4 +1,4 @@
-import { MikroORM } from '../../out/mikro-orm-d1';
+import { MikroORM } from '../../dist/mikro-orm-d1';
 import { User } from './test.entity';
 
 export default {

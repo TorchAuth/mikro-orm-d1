@@ -8,6 +8,7 @@ const globals = {
 	}, {}),
 };
 
+/** This plugin rewrites all node builtins to node:$1 */
 const nodePrefixRewrite = () => {
 	return {
 		name: "prefix-rewrite",
@@ -20,8 +21,8 @@ const nodePrefixRewrite = () => {
 
 export default defineConfig({
 	build: {
-		lib: { entry: "./src/index.ts", name: "d1-mikro" },
-		outDir: "./out",
+		lib: { entry: "./src/index.ts", name: "mikro-d1" },
+		outDir: "./dist",
 		rollupOptions: {
 			external: Object.keys(globals),
 			output: {
