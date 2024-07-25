@@ -11,7 +11,7 @@
  * Learn more at https://developers.cloudflare.com/workers/
  */
 
-import { MikroORM } from '@mikro-orm/core';
+import { MikroORM } from '../../out/mikro-orm-d1';
 import { User } from './test.entity';
 
 export default {
