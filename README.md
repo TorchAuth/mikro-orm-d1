@@ -45,4 +45,4 @@ There is a fundamental incompatibility between parts of Mikro-ORM and it's depen
   - Non-CF compatible imports still cause `workerd` to fail
 - Trying to set globals for all available native node modules available in `workerd`
   - Any modules not available would simply be polyfilled to cover up any errors
-  - Haven't gotten this to work just yet
+  - ~~Haven't gotten this to work just yet~~
