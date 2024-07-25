@@ -1,23 +1,29 @@
 import { type PluginOption, defineConfig } from "vite";
 import { builtinModules } from "node:module";
-import { nodePolyfills } from "vite-plugin-node-polyfills";
+import {
+	type ModuleNameWithoutNodePrefix,
+	nodePolyfills,
+} from "vite-plugin-node-polyfills";
 
-const unavailableModules = [
-	"events",
-	"timers",
-	"tty",
-	"fs",
-	"constants",
-	"path",
-	"module",
-	"os",
-	"url",
+const supportedModules = [
+	"assert",
 	"async_hooks",
-];
+	"buffer",
+	"events",
+	"crypto",
+	"diagnostics_channel",
+	"path",
+	"process",
+	"stream",
+	"string_decoder",
+	"test",
+	"util",
+] as ModuleNameWithoutNodePrefix[];
 
 const globals = {
 	...builtinModules.reduce((acc: Record<string, string>, module: string) => {
-		if (unavailableModules.includes(module)) return acc;
+		if (!supportedModules.includes(module as ModuleNameWithoutNodePrefix))
+			return acc;
 
 		const prefixedModule = `node:${module}`;
 		acc[prefixedModule] = prefixedModule;
@@ -31,7 +37,6 @@ const nodePrefixRewrite = () => {
 		name: "prefix-rewrite",
 		enforce: "pre",
 		resolveId(source) {
-			if (unavailableModules.includes(source)) return;
 			if (builtinModules.includes(source)) return { id: `node:${source}` };
 		},
 	} as PluginOption;
@@ -48,5 +53,11 @@ export default defineConfig({
 			},
 		},
 	},
-	plugins: [nodePrefixRewrite(), nodePolyfills({ protocolImports: false })],
+	plugins: [
+		nodePrefixRewrite(),
+		nodePolyfills({
+			protocolImports: true,
+			exclude: supportedModules,
+		}),
+	],
 });
