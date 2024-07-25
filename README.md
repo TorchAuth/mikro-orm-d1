@@ -43,3 +43,6 @@ There is a fundamental incompatibility between parts of Mikro-ORM and it's depen
 
 - Adding a small Vite plugin (`nodePrefixRewrite`) to rewrite all native node module imports to utilize prefixes squelches all errors related to `node:`
   - Non-CF compatible imports still cause `workerd` to fail
+- Trying to set globals for all available native node modules available in `workerd`
+  - Any modules not available would simply be polyfilled to cover up any errors
+  - Haven't gotten this to work just yet

@@ -1,9 +1,26 @@
 import { type PluginOption, defineConfig } from "vite";
 import { builtinModules } from "node:module";
+import nodePolyfills from "rollup-plugin-polyfill-node";
+
+const unavailableModules = [
+	"node:events",
+	"node:timers",
+	"node:tty",
+	"node:fs",
+	"node:constants",
+	"node:path",
+	"node:module",
+	"node:os",
+	"node:url",
+	"node:async_hooks",
+];
 
 const globals = {
 	...builtinModules.reduce((acc: Record<string, string>, module: string) => {
-		acc[`node:${module}`] = `node:${module}`;
+		const prefixedModule = `node:${module}`;
+		// if (unavailableModules.includes(prefixedModule)) return acc;
+
+		acc[prefixedModule] = prefixedModule;
 		return acc;
 	}, {}),
 };
@@ -28,6 +45,11 @@ export default defineConfig({
 			output: {
 				globals,
 			},
+			plugins: [
+				nodePolyfills({
+					include: unavailableModules,
+				}),
+			],
 		},
 	},
 	plugins: [nodePrefixRewrite()],
