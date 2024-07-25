@@ -17,7 +17,7 @@ type D1DriverOptions = {
 type D1DatabaseConfigOptions<
 	D extends IDatabaseDriver = D1Driver,
 	EM extends EntityManager = D[typeof EntityManagerType] & EntityManager
-> = Omit<Options<D, EM>, "driverOptions"> & D1DriverOptions;
+> = Omit<Options<D, EM>, "driverOptions" | ""> & D1DriverOptions;
 
 /**
  * @inheritDoc
@@ -37,7 +37,6 @@ export class D1MikroORM<
 		EM extends EntityManager = D[typeof EntityManagerType] & EntityManager
 	>(options?: D1DatabaseConfigOptions<D, EM>): Promise<MikroORM<D, EM>> {
 		if (options) options.ensureDatabase = false;
-
 		// biome-ignore lint/complexity/noThisInStatic: <explanation>
 		return super.init(options);
 	}

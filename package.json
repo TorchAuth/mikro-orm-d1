@@ -1,31 +1,32 @@
 {
-  "name": "@torchauth/mikro-orm-d1",
-  "version": "1.0.0",
-  "description": "",
-  "license": "MIT",
-  "author": "Bruce Harrison",
-  "type": "module",
-  "main": "src/index.ts",
-  "scripts": {
-    "test": "vitest",
-    "build": "tsc -p ./tsconfig.build.json"
-  },
-  "dependencies": {
-    "@mikro-orm/better-sqlite": "^6.3.0",
-    "@mikro-orm/cli": "^6.3.0",
-    "@mikro-orm/knex": "6.3.0",
-    "@torchauth/knex-cloudflare-d1": "^0.1.1"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "1.8.3",
-    "@cloudflare/vitest-pool-workers": "^0.4.13",
-    "@cloudflare/workers-types": "^4.20240718.0",
-    "@mikro-orm/core": "^6.3.0",
-    "typescript": "^5.5.3",
-    "vitest": "^1.5.0",
-    "wrangler": "^3.65.0"
-  },
-  "peerDependencies": {
-    "@mikro-orm/core": "^6.3.0"
-  }
+	"name": "@torchauth/mikro-orm-d1",
+	"version": "1.0.0",
+	"description": "",
+	"license": "MIT",
+	"author": "Bruce Harrison",
+	"type": "module",
+	"main": "src/index.ts",
+	"scripts": {
+		"test": "vitest",
+		"build": "rollup -c ./rollup.config.js"
+	},
+	"dependencies": {
+		"@mikro-orm/better-sqlite": "^6.3.0",
+		"@mikro-orm/cli": "^6.3.0",
+		"@mikro-orm/knex": "6.3.0",
+		"@torchauth/knex-cloudflare-d1": "^0.1.1"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.3",
+		"@cloudflare/vitest-pool-workers": "^0.4.13",
+		"@cloudflare/workers-types": "^4.20240718.0",
+		"@mikro-orm/core": "^6.3.0",
+		"typescript": "^5.5.3",
+		"vite": "^5.3.4",
+		"vitest": "^1.5.0",
+		"wrangler": "^3.65.0"
+	},
+	"peerDependencies": {
+		"@mikro-orm/core": "^6.3.0"
+	}
 }
