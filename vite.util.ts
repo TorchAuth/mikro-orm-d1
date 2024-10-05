@@ -1,23 +1,23 @@
-import { builtinModules } from "node:module";
-import type { PluginOption } from "vite";
+import { builtinModules } from 'node:module';
+import type { PluginOption } from 'vite';
 import {
   type ModuleNameWithoutNodePrefix,
   nodePolyfills,
-} from "vite-plugin-node-polyfills";
+} from 'vite-plugin-node-polyfills';
 
 const supportedModules = [
-  "assert",
-  "async_hooks",
-  "buffer",
-  "events",
-  "crypto",
-  "diagnostics_channel",
-  "path",
-  "process",
-  "stream",
-  "string_decoder",
-  "test",
-  "util",
+  'assert',
+  'async_hooks',
+  'buffer',
+  'events',
+  'crypto',
+  'diagnostics_channel',
+  'path',
+  'process',
+  'stream',
+  'string_decoder',
+  'test',
+  'util',
 ] as ModuleNameWithoutNodePrefix[];
 
 export const globals = {
@@ -34,8 +34,8 @@ export const globals = {
 /** This plugin rewrites all CF node builtin imports to node:$1, and leaves alone non-compatible modules */
 const nodePrefixRewrite = () => {
   return {
-    name: "prefix-rewrite",
-    enforce: "pre",
+    name: 'prefix-rewrite',
+    enforce: 'pre',
     resolveId(source) {
       if (builtinModules.includes(source)) return { id: `node:${source}` };
     },

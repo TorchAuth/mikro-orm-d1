@@ -8,7 +8,8 @@
 	"main": "src/index.ts",
 	"scripts": {
 		"test": "vitest",
-		"build": "vite build"
+		"build": "vite build",
+		"lint": "biome check --write"
 	},
 	"dependencies": {
 		"@mikro-orm/better-sqlite": "^6.3.12",

@@ -1,5 +1,5 @@
-import { AbstractSqlDriver } from '@mikro-orm/knex';
 import type { Configuration } from '@mikro-orm/core';
+import { AbstractSqlDriver } from '@mikro-orm/knex';
 import { D1Connection } from './D1Connection';
 import { D1Platform } from './D1Platform';
 

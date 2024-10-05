@@ -1,18 +1,40 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
-	"organizeImports": {
-		"enabled": true
-	},
-	"formatter": {
-		"enabled": true,
-		"lineEnding": "lf",
-		"indentStyle": "space",
-		"indentWidth": 2
-	},
-	"linter": {
-		"enabled": true,
-		"rules": {
-			"recommended": true
-		}
-	}
+  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "files": {
+    "include": ["*.ts", "*.tsx", "*.css"],
+    "ignore": ["*.gen.ts"]
+  },
+  "organizeImports": {
+    "enabled": true
+  },
+  "formatter": {
+    "enabled": true,
+    "lineEnding": "crlf",
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "style": {
+        "noParameterAssign": {
+          "level": "warn"
+        },
+        "useImportType": {
+          "level": "warn",
+          "fix": "safe"
+        },
+        "noUnusedTemplateLiteral": {
+          "level": "warn",
+          "fix": "safe"
+        }
+      }
+    }
+  }
 }
