@@ -1,5 +1,4 @@
 export * from "@mikro-orm/knex";
-export { knex } from "knex";
 export * from "./D1Connection";
 export * from "./D1SchemaHelper";
 export * from "./D1Platform";
