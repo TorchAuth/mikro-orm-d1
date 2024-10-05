@@ -5,24 +5,29 @@ The repo is a Mikro-ORM plugin that allows usage of Cloudflare D1.
 ## Example
 
 ```ts
-import { MikroORM } from "@mikro-orm/core";
+import { D1MikroORM } from "../../src";
 import { User } from "./test.entity";
 
 export default {
-	async fetch(request, env, ctx): Promise<Response> {
-		const mikro = await MikroORM.init({
-			debug: true,
-			dbName: "d1",
-			entities: [User],
-			driverOptions: {
-				connection: {
-					database: env.MY_DB,
-				},
-			},
-		});
-		return new Response("Hello World!");
-	},
+  async fetch(request, env, ctx): Promise<Response> {
+    console.log("test");
+    const mikro = await D1MikroORM.init({
+      debug: true,
+      dbName: "d1",
+      entities: [User],
+      driverOptions: {
+        connection: {
+          database: env.MY_DB,
+        },
+      },
+    });
+    return new Response("Hello World!");
+  },
 } satisfies ExportedHandler<Env>;
+
+interface Env {
+  MY_DB: D1Database;
+}
 ```
 
 ## Issues
@@ -30,6 +35,7 @@ export default {
 There is a fundamental incompatibility between parts of Mikro-ORM and it's dependencies with the `workerd` runtime. Here's a brain-dump of what I've seen thus far:
 
 - Cloudflare requires native `node` libs to be prefixed with `node:`
+  - [This appears to have been worked around](https://developers.cloudflare.com/workers/configuration/compatibility-dates/#nodejs-compatibility-flag)
   - Tons of older libraries utilized in Mikro-ORM don't do this
   - ~~Mikro-ORM also doesn't do this~~
   - This prevents even local development with Mikro-ORM
