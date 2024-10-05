@@ -1,10 +1,10 @@
-import { MikroORM } from "../../src";
+import { D1MikroORM } from "../../src";
 import { User } from "./test.entity";
 
 export default {
   async fetch(request, env, ctx): Promise<Response> {
     console.log("test");
-    const mikro = await MikroORM.init({
+    const mikro = await D1MikroORM.init({
       debug: true,
       dbName: "d1",
       entities: [User],

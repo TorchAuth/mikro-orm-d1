@@ -5,7 +5,7 @@ export * from "./D1Platform";
 export * from "./D1Driver";
 export * from "./D1ExceptionConverter";
 export {
-  D1MikroORM as MikroORM,
+  D1MikroORM,
   type D1Options as Options,
   defineD1Config as defineConfig,
 } from "./D1MikroORM";
